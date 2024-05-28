@@ -1,0 +1,19 @@
+""" You can ignore these comments :D
+#1)  txt fayl o`quvchi va uni ichidagi so'zlarni eng kattasini qaytaruvchi kod yoizing. 
+#nima digani buUU????????????????????????????????????????????????????????????? bosh harif sonlarni qaytarish kerakmi????"""
+
+
+"""\_______________ main code __________________/"""
+
+filename = 'something.txt'
+try:
+	with open(filename,'r') as f:
+		lines = f.read()
+		letters = 'qwertyuiopasdfghjklxcvbnm'
+		capitals = ''
+		for i in lines:
+			if i.isupper():
+				capitals += i
+	print(f"The capitals of words in {filename}: {capitals}")
+except FileNotFoundError:
+	print(f"{filename}NotFoundError")
